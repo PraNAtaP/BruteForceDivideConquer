@@ -13,12 +13,20 @@ public class MainNilaiMHS {
             new NilaiMHS("Hadi", "220101008", 2021, 88, 90)
         };
 
+        System.out.println("DAFTAR MAHASISWA:");
+        System.out.println("Nama\tNIM\t\tTahun\tUTS\tUAS");
+        for (NilaiMHS nm : data) {
+            System.out.println(nm.nama + "\t" + nm.nim + "\t" + nm.tahunMasuk
+                               + "\t" + nm.uts + "\t" + nm.uas);
+        }
+
         int maxUTS = NilaiMHS.maxUTSDC(data, 0, data.length - 1);
 
         int minUTS = NilaiMHS.minUTSDC(data, 0, data.length - 1);
 
         double rataUAS = NilaiMHS.rataUASBF(data);
 
+        System.out.println("\nHASIL PERHITUNGAN:");
         System.out.println("Nilai UTS Tertinggi (DC): " + maxUTS);
         System.out.println("Nilai UTS Terendah (DC): " + minUTS);
         System.out.println("Rata-rata Nilai UAS (BF): " + rataUAS);
