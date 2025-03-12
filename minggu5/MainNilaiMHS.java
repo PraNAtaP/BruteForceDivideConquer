@@ -14,11 +14,14 @@ public class MainNilaiMHS {
         };
 
         System.out.println("DAFTAR MAHASISWA:");
+        System.out.println("===========================================");
         System.out.println("Nama\tNIM\t\tTahun\tUTS\tUAS");
+        System.out.println("-------------------------------------------");
         for (NilaiMHS nm : data) {
             System.out.println(nm.nama + "\t" + nm.nim + "\t" + nm.tahunMasuk
                                + "\t" + nm.uts + "\t" + nm.uas);
         }
+        System.out.println("-------------------------------------------");
 
         int maxUTS = NilaiMHS.maxUTSDC(data, 0, data.length - 1);
 
@@ -27,8 +30,10 @@ public class MainNilaiMHS {
         double rataUAS = NilaiMHS.rataUASBF(data);
 
         System.out.println("\nHASIL PERHITUNGAN:");
+        System.out.println("==========================================");
         System.out.println("Nilai UTS Tertinggi (DC): " + maxUTS);
         System.out.println("Nilai UTS Terendah (DC): " + minUTS);
         System.out.println("Rata-rata Nilai UAS (BF): " + rataUAS);
+        System.out.println("------------------------------------------");
     }
 }
